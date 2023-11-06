@@ -1,3 +1,5 @@
+Klaudiusz Orłowski isi3
+
 Zadanie 1
 
 1. 
