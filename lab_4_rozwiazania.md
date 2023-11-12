@@ -1,8 +1,8 @@
 Klaudiusz Orłowski isi3
 
 Zadanie 1
-
-1. 
+***
+```1. 
 create table postac ( 
   id_postaci int primary key auto_increment,
   nazwa varchar(40),
@@ -14,7 +14,8 @@ insert into postac values(default,"Bjorn","wiking","1700-10-23",323);
 insert into postac values(default,"Drozd","ptak","1700-10-23",323);
 insert into postac values(default,"Tesciowa","kobieta","1700-10-23",323);
 update postac set wiek=88 where id_postaci=3;
-
+```
+***
 Zadanie 2
 
 1.
