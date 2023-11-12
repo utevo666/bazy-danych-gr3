@@ -2,7 +2,8 @@ Klaudiusz Orłowski isi3
 
 Zadanie 1
 ***
-```1. 
+```
+1. 
 create table postac ( 
   id_postaci int primary key auto_increment,
   nazwa varchar(40),
