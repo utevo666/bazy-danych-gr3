@@ -51,6 +51,20 @@ insert into izba values('sloneczna 54','spizarnia','10','czerwony','Bjorn');
 ```
 ***
 Zadanie 4
-
+```
 1.
+create table przetwory(
+  id_przetworu int primary key auto_increment,
+  rok_produkcji varchar(4) default '1654',
+  id_wykonawcy int,
+  zawartosc varchar(40),
+  dodatek varchar(40) default 'papryczka chilli',
+  id_konsumenta int,
+  foreign key(id_wykonawcy) references postac(id_postaci),
+  foreign key(id_konsumenta) references postac(id_postaci));
 
+2
+insert into przetwory values(default,default,'1','bigos',default,'3')
+
+```
+***
