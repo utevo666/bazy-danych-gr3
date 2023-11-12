@@ -18,7 +18,8 @@ update postac set wiek=88 where id_postaci=3;
 ```
 ***
 Zadanie 2
-
+***
+```
 1.
 create table walizka (
   id_walizki int primary key auto_increment,
@@ -30,7 +31,8 @@ create table walizka (
 alter table walizka alter kolor set default "rozowy";
 insert into walizka values(default,30,"rozowy",1);
 insert into walizka values(default,20,"zolty",3);
-
+```
+***
 Zadanie 3
 
 1.
