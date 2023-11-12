@@ -34,7 +34,7 @@ insert into walizka values(default,20,"zolty",3);
 ```
 ***
 Zadanie 3
-
+```
 1.
 create table izba ( 
   adres_budynku varchar(50),
@@ -48,7 +48,8 @@ create table izba (
 alter table izba add kolor_izby varchar(20) default 'czarny' after metraz;
 3.
 insert into izba values('sloneczna 54','spizarnia','10','czerwony','Bjorn');
-
+```
+***
 Zadanie 4
 
 1.
