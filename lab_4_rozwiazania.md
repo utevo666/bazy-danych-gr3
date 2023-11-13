@@ -87,4 +87,10 @@ data_wodowania date,
 max_ladownosc int,
 check(max_ladownosc>0)
 );
+
+
+3.
+insert into statek values ('Odyn','drakkar','1532-03-21','600'),('Thor','drakkar','1469-03-05','300');
+
 ```
+***
