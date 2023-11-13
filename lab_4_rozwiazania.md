@@ -2,7 +2,7 @@ Klaudiusz Orłowski isi3
 
 Zadanie 1
 ***
-```
+```sql
 1. 
 create table postac ( 
   id_postaci int primary key auto_increment,
@@ -19,7 +19,7 @@ update postac set wiek=88 where id_postaci=3;
 ***
 Zadanie 2
 ***
-```
+```sql
 1.
 create table walizka (
   id_walizki int primary key auto_increment,
@@ -34,7 +34,7 @@ insert into walizka values(default,20,"zolty",3);
 ```
 ***
 Zadanie 3
-```
+```sql
 1.
 create table izba ( 
   adres_budynku varchar(50),
@@ -51,7 +51,7 @@ insert into izba values('sloneczna 54','spizarnia','10','czerwony','Bjorn');
 ```
 ***
 Zadanie 4
-```
+```sql
 1.
 create table przetwory(
   id_przetworu int primary key auto_increment,
@@ -68,3 +68,23 @@ insert into przetwory values(default,default,'1','bigos',default,'3')
 
 ```
 ***
+Zadanie 5
+```sql
+1.
+insert into postac values
+(default, 'Asgard', 'wiking', '1678-08-12',340),
+(default, 'Khorad', 'wiking', '1864-03-22',170),
+(default, 'Edgard', 'wiking', '1723-06-13',300),
+(default, 'Floki', 'wiking', '1623-07-15',430),
+(default, 'Ragnar', 'wiking', '1738-01-30',300);
+
+2.
+
+create table statek (
+nazwa_statku varchar(30) primary key,
+rodzaj_statku enum('byrding','drakkar','sneka','knara'),
+data_wodowania date,
+max_ladownosc int,
+check(max_ladownosc>0)
+);
+```
