@@ -90,7 +90,38 @@ check(max_ladownosc>0)
 
 
 3.
-insert into statek values ('Odyn','drakkar','1532-03-21','600'),('Thor','drakkar','1469-03-05','300');
 
+insert into statek values('Odyn','drakkar','1532-03-21','600'),('Thor','drakkar','1469-03-05','300');
+
+4.
+
+alter table postac add funkcja varchar(40);
+
+5.
+
+update postac set funkcja = 'kapitan' where nazwa = 'Bjorn';
+
+6.
+
+alter table postac add column statek varchar(50) default null;
+alter table postac add foreign key (statek) references statek(nazwa_statku) on delete set null;
+
+7.
+
+update postac set statek = 'Odyn' where nazwa = 'Bjorn';
+update postac set statek = 'Odyn' where nazwa = 'Asgard';
+update postac set statek = 'Thor' where nazwa = 'Khorad';
+update postac set statek = 'Thor' where nazwa = 'Edgard';
+update postac set statek = 'Odyn' where nazwa = 'Floki';
+update postac set statek = 'Thor' where nazwa = 'Ragnar';
+update postac set statek = 'Thor' where nazwa = 'Drozd';
+
+8.
+
+delete from izba where nazwa_izby = 'spizarnia';
+
+9.
+
+drop table izba;
 ```
 ***
