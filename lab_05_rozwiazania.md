@@ -23,4 +23,8 @@ a)
 alter table postac add pesel char(11) first;
 update postac set pesel = '17763874635' where id_postaci = 1;
 alter table postac add primary key(pesel);
+b)
+alter table postac modify rodzaj enum('wiking','ptak','kobieta','syrena');
+c)
+insert into postac (id_postaci,nazwa,rodzaj,wiek,pesel) values ('9','Gertruda Nieszczera','syrena
 ```
