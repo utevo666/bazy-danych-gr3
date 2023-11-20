@@ -35,5 +35,8 @@ Zadanie 3
 a)
 update postac set statek='Odyn'
 where nazwa like '%a%';
-
+b)
+update statek set max_ladownosc = 0.7 * max_ladownosc where data_wodowania >= '1901-01-01' and data_wodowania <= '2000-01-01';
+c)
+alter table postac modify wiek int unsigned check(wiek <=1000);
 ```
