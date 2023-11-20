@@ -28,5 +28,12 @@ alter table postac modify rodzaj enum('wiking','ptak','kobieta','syrena');
 c)
 insert into postac (id_postaci,nazwa,rodzaj,wiek,pesel) values ('9','Gertruda Nieszczera','syrena','28','12345678917');
 ```
+***
+Zadanie 3
+***
+```sql
+a)
+update postac set statek='Odyn'
+where nazwa like '%a%';
 
-
+```
