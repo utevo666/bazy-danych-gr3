@@ -40,3 +40,24 @@ update statek set max_ladownosc = 0.7 * max_ladownosc where data_wodowania >= '1
 c)
 alter table postac modify wiek int unsigned check(wiek <=1000);
 ```
+***
+Zadanie 4
+***
+```sql
+a)
+alter table postac modify rodzaj enum('wiking','ptak','kobieta','syrena','waz');
+insert into postac(id_postaci,nazwa,rodzaj,wiek,pesel,data_ur) values('14','Loko','waz','7','12345678918','1432-05-01')
+b)
+create table marynarz select * from postac where statek is not null;
+c)
+alter table marynarz add foreign key (statek) references statek(nazwa_statku) on delete set null;
+
+```
+***
+Zadanie 5
+***
+```sql
+a)
+
+
+```
