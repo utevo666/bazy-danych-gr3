@@ -58,6 +58,23 @@ Zadanie 5
 ***
 ```sql
 a)
-
-
+update postac set statek = null;
+update marynarz set statek = null;
+b)
+delete from postac where nazwa = 'Khorad';
+delete from marynarz where nazwa = 'Khorad';
+c)
+delete from statek where nazwa_statku = 'Odyn';
+delete from statek where nazwa_statku = 'Thor';
+d)
+alter table postac drop foreign key postac_ibfk_1;
+alter table marynarz drop foreign key marynarz_ibfk_1;
+drop table statek;
+e)
+create table zwierz (
+id int primary key auto_increment,
+nazwa varchar(40),
+wiek int);
+f)
+insert into zwierz (nazwa,wiek) select nazwa,wiek from postac where rodzaj = 'waz' or rodzaj = 'ptak';
 ```
