@@ -26,5 +26,7 @@ alter table postac add primary key(pesel);
 b)
 alter table postac modify rodzaj enum('wiking','ptak','kobieta','syrena');
 c)
-insert into postac (id_postaci,nazwa,rodzaj,wiek,pesel) values ('9','Gertruda Nieszczera','syrena
+insert into postac (id_postaci,nazwa,rodzaj,wiek,pesel) values ('9','Gertruda Nieszczera','syrena','28','12345678917');
 ```
+
+
