@@ -38,8 +38,12 @@ select * from kreatura order by dataUr asc limit 5;
 Zadanie 4
 ***
 ```sql
-
-
+1.
+select distinct rodzaj from kreatura;
+2.
+select concat(nazwa,' ', rodzaj) from kreatura where rodzaj like 'wi%';
+3.
+select concat(ilosc*waga) calkowita_waga from zasob where dataPozyskania >= '2000-01-01' and dataPozyskania <='2007-12-31';
 ```
 ***
 Zadanie 5
