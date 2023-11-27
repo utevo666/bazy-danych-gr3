@@ -50,7 +50,7 @@ Zadanie 5
 ***
 ```sql
 1.
-select *, concat((ilosc*waga)*0.7) masa_netto_jedzenia, concat((ilosc*waga)*0.3) waga_odpadkow from zasob where rodzaj regexp 'jedzenie';
+select *, concat((ilosc*waga)*0.7) masa_netto_jedzenia, concat((ilosc*waga)*0.3) waga_odpadkow from zasob where rodzaj like 'jedzenie';
 2.
 select * from zasob where rodzaj is null;
 3.
