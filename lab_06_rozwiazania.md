@@ -43,12 +43,16 @@ select distinct rodzaj from kreatura;
 2.
 select concat(nazwa,' ', rodzaj) from kreatura where rodzaj like 'wi%';
 3.
-select concat(ilosc*waga) calkowita_waga from zasob where dataPozyskania >= '2000-01-01' and dataPozyskania <='2007-12-31';
+select*, concat(ilosc*waga) calkowita_waga from zasob where dataPozyskania >= '2000-01-01' and dataPozyskania <='2007-12-31';
 ```
 ***
 Zadanie 5
 ***
 ```sql
-
-
+1.
+select *, concat((ilosc*waga)*0.7) masa_netto_jedzenia, concat((ilosc*waga)*0.3) waga_odpadkow from zasob where rodzaj regexp 'jedzenie';
+2.
+select * from zasob where rodzaj is null;
+3.
+select distinct rodzaj from zasob where nazwa like'Ba%' or nazwa like '%os' order by rodzaj asc;
 ```
