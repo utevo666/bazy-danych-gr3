@@ -36,7 +36,12 @@ select k.nazwa, e.idZasobu from kreatura k left join ekwipunek e on k.idKreatury
 Zadanie 4
 ***
 ```sql
-
+1.
+select kreatura.nazwa, year(kreatura.dataUr) as rok_urodzenia, zasob.idZasobu, zasob.nazwa from kreatura cross join ekwipunek on kreatura.idKreatury = ekwipunek.idKreatury join zasob on zasob.idZasobu = ekwipunek.idZasobu having rok_urodzenia > 1670 and rok_urodzenia < 1680;
+2.
+select k.nazwa, e.ilosc, z.nazwa from kreatura k inner join ekwipunek e on k.idKreatury = e.IdKreatury inner join zasob z on z.idZasobu = e.idZasobu where z.rodzaj = 'jedzenie' order by k.dataUr desc limit 5;
+3.
+select concat(k1.nazwa, ' - ', k2.nazwa) as nazwa, k1.idKreatury, k2.idKreatury from kreatura k1, kreatura k2 where k1.idKreatury - k2.idKreatury = 5;
 ```
 ***
 Zadanie 5
