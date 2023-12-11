@@ -48,8 +48,11 @@ Zadanie 5
 ***
 ```sql
 1.
-select kreatura.rodzaj, avg(e.ilosc* z.waga) from kreatura inner join ekwipunek e on kreatura.idKreatury = e.idKreatury inner join zasob z on z.idZasobu = e.idZasobu where kreatura.rodzaj not in ('malpa','waz') and e.ilosc < 30 group by kreatura.rodzaj;
+select kreatura.rodzaj, avg(e.ilosc* z.waga) from kreatura inner join ekwipunek e on kreatura.idKreatury = e.idKreatury
+inner join zasob z on z.idZasobu = e.idZasobu where kreatura.rodzaj not in ('malpa','waz') and e.ilosc < 30 group by kreatura.rodzaj;
 2.
-select 'najmlodsza', a.maxData, b.nazwa, a.rodzaj from (select max(dataUr) maxData, rodzaj from kreatura group by rodzaj) a, (select nazwa, dataUr from kreatura) b where a.maxData = b.dataUr union select 'najstarsza', a.minData, b.nazwa, a.rodzaj from (select min(dataUr) minData, rodzaj from kreatura group by rodzaj) a, (select nazwa, dataUr from kreatura) b where a.minData = b.dataUr 
+select 'najmlodsza', a.maxData, b.nazwa, a.rodzaj from (select max(dataUr) maxData, rodzaj from kreatura group by rodzaj) a,
+(select nazwa, dataUr from kreatura) b where a.maxData = b.dataUr union select 'najstarsza', a.minData, b.nazwa, a.rodzaj from
+(select min(dataUr) minData, rodzaj from kreatura group by rodzaj) a, (select nazwa, dataUr from kreatura) b where a.minData = b.dataUr 
 ```
 ***
