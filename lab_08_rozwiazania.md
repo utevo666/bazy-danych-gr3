@@ -26,3 +26,14 @@ from wyprawa left join uczestnicy on wyprawa.id_wyprawy = uczestnicy.id_wyprawy 
 select etapy_wyprawy.kolejnosc, sektor.nazwa, kreatura.nazwa from wyprawa inner join etapy_wyprawy on wyprawa.id_wyprawy = etapy_wyprawy.idWyprawy
 inner join sektor on sektor.id_sektora = etapy_wyprawy.sektor inner join kreatura on kreatura.idKreatury = wyprawa.kierownik order by etapy_wyprawy.kolejnosc asc, wyprawa.data_rozpoczecia asc;
 ```
+***
+Zadanie 3
+***
+```sql
+1.
+select ifnull(count(etapy_wyprawy.sektor), 0) as ilosc_odwiedzin, sektor.nazwa from sektor
+left join etapy_wyprawy on etapy_wyprawy.sektor = sektor.id_sektora group by sektor.id_sektora;
+2.
+
+```
+***
