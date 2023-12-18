@@ -34,6 +34,7 @@ Zadanie 3
 select ifnull(count(etapy_wyprawy.sektor), 0) as ilosc_odwiedzin, sektor.nazwa from sektor
 left join etapy_wyprawy on etapy_wyprawy.sektor = sektor.id_sektora group by sektor.id_sektora;
 2.
-
+select kreatura.nazwa, if(count(uczestnicy.id_wyprawy) = 0, 'nie bral udzialu w wyprawie', 'bral udzial w wyprawie')
+as czy_wyprawa from kreatura left join uczestnicy on uczestnicy.id_uczestnika = kreatura.idKreatury group by kreatura.nazwa;
 ```
 ***
