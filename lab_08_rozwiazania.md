@@ -38,3 +38,14 @@ select kreatura.nazwa, if(count(uczestnicy.id_wyprawy) = 0, 'nie bral udzialu w 
 as czy_wyprawa from kreatura left join uczestnicy on uczestnicy.id_uczestnika = kreatura.idKreatury group by kreatura.nazwa;
 ```
 ***
+Zadanie 4
+***
+```sql
+1.
+select idWyprawy, sum(lenght(dziennik)) as suma_znakow from etapy_wyprawy group by idWyprawy having suma_znakow < 400;
+2.
+select wyprawa.nazwa, sum(zasob.waga*ekwipunek.ilosc) / count(uczestnicy.id_uczestnika) as srednia_waga from wyprawa inner join uczestnicy on wyprawa.id_wyprawy = uczestnicy.id_wyprawy
+inner join kreatura on uczestnicy.id_uczestnika = kreatura.idKreatury inner join ekwipunek on ekwipunek.idKreatury = kreatura.idKreatury 
+inner join zasob on zasob.idZasobu = ekwipunek.idZasobu group by wyprawa.nazwa;
+```
+***
