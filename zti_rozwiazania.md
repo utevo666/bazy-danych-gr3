@@ -82,15 +82,4 @@ select k.pelna_nazwa, z.numer_zamowienia, sum(pz.ilosc * pz.cena) as wartoscfrom
 inner join pozycja_zamowienia pz on z.id_zamowienia = pz.zamowienie inner join klient k on k.id_klienta = z.klient group by z.id_zamowienia order by wartosc desc limit 10;
 ```
 ***
-Zadanie 3
-***
-```sql
 
-```
-***
-Zadanie 4
-***
-```sql
-
-```
-***
