@@ -15,12 +15,14 @@ end$
 Zadanie 2
 ***
 ```sql
-create trigger t4 after delete on wyprawa 
-for each row 
-begin 
-insert into archiwum_wypraw 
-values(old.id_wyprawy, old.nazwa, old.data_rozpoczecia, old.data_zakonczenia, 
-(select nazwa from kreatura where kreatura.idKreatury = old.kierownik)); 
+create trigger wyprawa_after_delete
+after delete on wyprawa
+for each row
+begin
+insert into archiwum_wyprawy values(
+select w.id_wyprawy, w.nazwa ,w.data_rozpoczecia, w.data_zakonczenia, k.nazwa from wyprawa w
+inner join kreatura k on k.idKreatury = w.kierownik
+where id_wyprawy = old.id_wyprawy;
 end$
 ```
 ***
