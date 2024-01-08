@@ -1,4 +1,5 @@
 Klaudiusz Orłowski isi 3
+#Zadania czesc 1
 ***
 Zadanie 1
 ***
@@ -60,5 +61,12 @@ Zadanie 10
 select imie, nazwisko, sum(pz.ilosc * pz.cena) as wartosc from zamowienie z inner join pozycja_zamowienia pz on z.id_zamowienia = pz.zamowienie 
 inner join pracownik p on p.id_pracownika = z.pracownik_id_pracownika
 group by p.id_pracownika order by wartosc desc;
+```
+***
+#Zadania czesc 2
+***
+Zadanie 1
+***
+```sql
 ```
 ***
