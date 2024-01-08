@@ -1,5 +1,5 @@
 Klaudiusz Orłowski isi 3
-#Zadania czesc 1
+Zadania czesc 1
 ***
 Zadanie 1
 ***
@@ -63,7 +63,7 @@ inner join pracownik p on p.id_pracownika = z.pracownik_id_pracownika
 group by p.id_pracownika order by wartosc desc;
 ```
 ***
-#Zadania czesc 2
+Zadania czesc 2
 ***
 Zadanie 1
 ***
