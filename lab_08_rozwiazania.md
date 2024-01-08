@@ -49,3 +49,11 @@ inner join kreatura on uczestnicy.id_uczestnika = kreatura.idKreatury inner join
 inner join zasob on zasob.idZasobu = ekwipunek.idZasobu group by wyprawa.nazwa;
 ```
 ***
+Zadanie 5
+***
+```sql
+select k.nazwa, datediff(w.data_rozpoczecia, k.dataUr) as wiek, w.nazwa from etapy_wyprawy ew inner join sektor s on ew.sektor = s.id_sektora
+inner join wyprawa w on w.id_wyprawy = ew.idWyprawy inner join uczestnicy u on w.id_wyprawy = u.id_wyprawy inner join kreatura k on k.idKreatury = u.id_uczestnika
+where s.nazwa = 'Chatka dziadka' group by k.nazwa;
+```
+***
