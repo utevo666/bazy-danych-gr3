@@ -30,3 +30,35 @@ Zadanie 5
 select kategoria, group_concat(nazwa_towaru) as lista_produktow from towar group by kategoria 
 ```
 ***
+Zadanie 6
+***
+```sql
+select round(avg(pensja), 2) as srednie_zarobki from pracownik
+```
+***
+Zadanie 7
+***
+```sql
+select round(avg(pensja), 2) as srednie_zarobki from pracownik where datediff(curdate(), data_zatrudnienia) >= 5;
+```
+***
+Zadanie 8
+***
+```sql
+select t.nazwa_towaru, sum(pz.ilosc) from towar t inner join pozycja_zamowienia pz on t.id_towaru = pz.towar group by t.nazwa_towaru order by 2 desc limit 10;
+```
+***
+Zadanie 9
+***
+```sql
+select z.numer_zamowienia, sum(pz.ilosc * pz.cena) as wartosc from zamowienie z inner join pozycja_zamowienia pz on z.id_zamowienia = pz.zamowienie where year(z.data_zamowienia) = 2017 and quarter(z.data_zamowienia) = 1 group by z.id_zamowienia
+```
+***
+Zadanie 10
+***
+```sql
+select imie, nazwisko, sum(pz.ilosc * pz.cena) as wartosc from zamowienie z inner join pozycja_zamowienia pz on z.id_zamowienia = pz.zamowienie 
+inner join pracownik p on p.id_pracownika = z.pracownik_id_pracownika
+group by p.id_pracownika order by wartosc desc;
+```
+***
